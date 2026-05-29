@@ -753,3 +753,30 @@ footer strong { color: var(--gold); font-weight: 600; }
   .stat-box { padding: 20px 14px; }
   .stat-box h3 { font-size: 1.8rem; }
 }
+
+
+/* ─── MAKE SIR.PNG & LOGO.PNG BEHAVE LIKE NOTE-CARDS ─── */
+
+/* Ensure same transition */
+.brand img,
+.image-frame img {
+  transition: transform 0.6s ease;
+}
+
+/* SAME hover trigger as note-card */
+.brand:hover img,
+.image-frame:hover img {
+  transform: scale(1.05);
+}
+
+/* Optional: match border + glow feel (like note-card) */
+.brand,
+.image-frame {
+  transition: border-color 0.4s, box-shadow 0.4s;
+}
+
+.brand:hover,
+.image-frame:hover {
+  border-color: rgba(212,175,55,0.5);
+  box-shadow: 0 20px 60px rgba(212,175,55,0.1);
+}
