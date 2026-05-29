@@ -753,3 +753,27 @@ footer strong { color: var(--gold); font-weight: 600; }
   .stat-box { padding: 20px 14px; }
   .stat-box h3 { font-size: 1.8rem; }
 }
+/* ─── POINTER GOLD GLOW ─── */
+.pointer-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 140px;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  
+  z-index: 999999; /* FIX: stay above canvas */
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 0, 0.7) 0%,
+    rgba(255, 215, 0, 0.3) 40%,
+    rgba(255, 215, 0, 0) 70%
+  );
+
+  filter: blur(35px);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
